@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&display=swap');
+
+/* Navbar */
+
+header {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+/* Body */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    padding: 80px 50px 0px 50px;
+    overflow: auto;
+}
+
+.background {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 80;
+}
+
+/* Media Screen for Responsive Defice */
+@media screen and (max-width: 1200px) {
+    .card-detail {
+        width: 50%;
+        left: 25%;
+    }
+
+}
+
+@media screen and (max-width: 1050px) {
+    .card-item{
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+
+
+}
+
+@media screen and (max-width: 800px) {
+    .card-detail {
+        width: 60%;
+        left: 20%;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .nav{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 660px) {
+    main {
+        padding: 80px 7px 0px 7px;
+    }
+}
+@media screen and (max-width: 550px) {
+
+
+
+}
+@media screen and (max-width: 500px) {
+
+}
+
+@media screen and (max-width: 380px) {
+
+}
+
+@media screen and (max-width: 320px) {
+
+}
+
+@media screen and (max-width: 280px) {
+
+}
