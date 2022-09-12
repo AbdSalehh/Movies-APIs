@@ -1,19 +1,14 @@
 class popularMovies extends HTMLElement {
-    constructor() {
-        super();
-        this.shadowDOM = this.attachShadow({mode: "open"});
-    }
 
     connectedCallback() {
         this.render();
     }
 
     render() {
-        this.shadowDOM.innerHTML = `
+        this.innerHTML = `
         <style>
 
         .popular-content{
-            margin: 0px 30px 0px 30px;
             display: flex;
             width: 100%;
             background-color: #e7e7e7;
@@ -179,96 +174,6 @@ class popularMovies extends HTMLElement {
             <div class="box">
                 <div class="popular-item swiper">
                     <div class="swiper-wrapper">
-                        <div class="popular-card swiper-slide" style="width:350px;height:200px;">
-                            <div class="overlay">
-                                <div class="img-overlay">
-                                    <button>
-                                        DETAIL
-                                    </button>
-                                    <button class="trailer-btn" onclick="detail()">
-                                        TRAILER
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="popular-desc">
-                                <div class="movie-title">Spider-Man: No Way Home</div>
-                                <div class="relase-date">2002-08-10</div>
-                                <div class="genre">Petualangan</div>
-                            </div>
-                            <img src="https://cdn1-production-images-kly.akamaized.net/ByfoNPSMTMfPEtHmnQMFhgGP80Y=/640x853/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3635478/original/025116000_1637133546-253154135_2120128131476179_3401639978712735642_n.jpg" alt="">
-                        </div>
-                        <div class="popular-card swiper-slide" style="width:350px;height:200px;">
-                            <div class="overlay">
-                                <div class="img-overlay">
-                                    <button>
-                                        DETAIL
-                                    </button>
-                                    <button class="trailer-btn" onclick="detail()">
-                                        TRAILER
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="popular-desc">
-                                <div class="movie-title">Spider-Man: No Way Home</div>
-                                <div class="relase-date">2002-08-10</div>
-                                <div class="genre">Petualangan</div>
-                            </div>
-                            <img src="https://cdn1-production-images-kly.akamaized.net/ByfoNPSMTMfPEtHmnQMFhgGP80Y=/640x853/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3635478/original/025116000_1637133546-253154135_2120128131476179_3401639978712735642_n.jpg" alt="">
-                        </div>
-                        <div class="popular-card swiper-slide" style="width:350px;height:200px;">
-                            <div class="overlay">
-                                <div class="img-overlay">
-                                    <button>
-                                        DETAIL
-                                    </button>
-                                    <button class="trailer-btn" onclick="detail()">
-                                        TRAILER
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="popular-desc">
-                                <div class="movie-title">Spider-Man: No Way Home</div>
-                                <div class="relase-date">2002-08-10</div>
-                                <div class="genre">Petualangan</div>
-                            </div>
-                            <img src="https://cdn1-production-images-kly.akamaized.net/ByfoNPSMTMfPEtHmnQMFhgGP80Y=/640x853/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3635478/original/025116000_1637133546-253154135_2120128131476179_3401639978712735642_n.jpg" alt="">
-                        </div>
-                        <div class="popular-card swiper-slide" style="width:350px;height:200px;">
-                            <div class="overlay">
-                                <div class="img-overlay">
-                                    <button>
-                                        DETAIL
-                                    </button>
-                                    <button class="trailer-btn" onclick="detail()">
-                                        TRAILER
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="popular-desc">
-                                <div class="movie-title">Spider-Man: No Way Home</div>
-                                <div class="relase-date">2002-08-10</div>
-                                <div class="genre">Petualangan</div>
-                            </div>
-                            <img src="https://cdn1-production-images-kly.akamaized.net/ByfoNPSMTMfPEtHmnQMFhgGP80Y=/640x853/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3635478/original/025116000_1637133546-253154135_2120128131476179_3401639978712735642_n.jpg" alt="">
-                        </div>
-                        <div class="popular-card swiper-slide" style="width:350px;height:200px;">
-                            <div class="overlay">
-                                <div class="img-overlay">
-                                    <button>
-                                        DETAIL
-                                    </button>
-                                    <button class="trailer-btn" onclick="detail()">
-                                        TRAILER
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="popular-desc">
-                                <div class="movie-title">Spider-Man: No Way Home</div>
-                                <div class="relase-date">2002-08-10</div>
-                                <div class="genre">Petualangan</div>
-                            </div>
-                            <img src="https://cdn1-production-images-kly.akamaized.net/ByfoNPSMTMfPEtHmnQMFhgGP80Y=/640x853/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3635478/original/025116000_1637133546-253154135_2120128131476179_3401639978712735642_n.jpg" alt="">
-                        </div>
                     </div>
                 </div>
             </div>

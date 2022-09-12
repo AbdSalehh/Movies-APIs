@@ -1,21 +1,12 @@
 class allMovies extends HTMLElement {
-    constructor() {
-        super();
-        this.shadowDOM = this.attachShadow({mode: "open"});
-    }
 
     connectedCallback() {
         this.render();
     }
 
     render() {
-        this.shadowDOM.innerHTML = `
+        this.innerHTML = `
         <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
         
         .card-item {
             display: grid;
@@ -231,27 +222,7 @@ class allMovies extends HTMLElement {
                     </div>
                 </div>
             </div>
-            <div class="card-item">
-                <div class="movies-card">
-                    <div class="overlay">
-                        <div class="img-overlay">
-                            <button>
-                                DETAIL
-                            </button>
-                            <button class="trailer">
-                                TRAILER
-                            </button>
-                        </div>
-                    </div>
-                    <div class="rate"><span>9.5</span></div>
-                    <img src="https://cdn1-production-images-kly.akamaized.net/ByfoNPSMTMfPEtHmnQMFhgGP80Y=/640x853/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3635478/original/025116000_1637133546-253154135_2120128131476179_3401639978712735642_n.jpg" alt="">
-                    <div class="desc">
-                        <div class="movie-title">Spider-Man: No Way Home</div>
-                        <div class="relase-date">2002-08-10</div>
-                        <div class="genre">Petualangan</div>
-                    </div>
-                </div>
-            </div>
+            <div class="card-item"></div>
         `;
     }
 }
