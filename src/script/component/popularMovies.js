@@ -164,7 +164,7 @@ class popularMovies extends HTMLElement {
         
             <div id="content">
                 <div class="popular-content">
-                    <h2>Popular Video</h2>
+                    <h2>Popular Movies</h2>
                     <div class="swiper-btn">
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>

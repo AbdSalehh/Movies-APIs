@@ -67,58 +67,6 @@ class allMovies extends HTMLElement {
             margin-bottom: 20px;
         }
 
-        
-        .search {
-            display: flex;
-            flex-direction: column;
-            border-radius: 10px;
-            margin-top: 7px;
-            margin-right: 15px;
-        }
-
-        .search-box {
-            display: flex;
-            background: #ffffff;
-            height: 40px;
-            border-radius: 40px;
-            padding: 7px;
-            align-items: center;
-        }
-
-        .search-txt {
-            padding-left: 8px;
-            border: none;
-            background: none;
-            outline: none;
-            float: left;
-            color: #2f3640;
-            font-size: 14px;
-            transition: 0.4s;
-            font-family: 'Poppins';
-        }
-
-        #searchSubmit {
-            float: right;
-            border: 1px solid;
-            border-color: #f1f3fb;
-            background: #f1f3fb;
-            border-radius: 50%;
-            padding: 7px;
-        }
-
-        #searchSubmit:hover {
-            background: #aaabaf;
-        }
-
-        #searchSubmit i {
-            font-size: 17px;
-            color: #2f3640;
-        }
-
-        #searchSubmit i:hover {
-            color: #fff;
-        }
-
         .desc .movie-title{
             font-size: 16px;
             font-weight: 600;
@@ -137,7 +85,6 @@ class allMovies extends HTMLElement {
             padding: 0 30px 0px 30px;
             align-items: center;
             margin-top: 30px;
-            object-
         }
 
         h2{
@@ -208,21 +155,19 @@ class allMovies extends HTMLElement {
             color: #515A5A;
         }
 
+        .genres{
+            display: inline;
+            position: relative;
+        }
         </style>
             <div id="content">
                 <div class="all-movies-content">
-                    <h2>All Movies Video</h2>
-                    <div class="search" id="search">
-                        <div class="search-box shadow">
-                            <input id="search-txt" class="search-txt" type="text" name=""
-                                placeholder="Ketik judul buku disini..">
-                            <button id="searchSubmit" type="submit">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
-                        <div class="BookCard">
-                        </div>
-                    </div>
+                    <h2>All Movie</h2>
+                </div>
+                <div class="genres">
+                <button class="btn-genres">Action</button>
+                <button class="btn-genres">Adventure</button>
+                <button class="btn-genres">Animation</button>
                 </div>
             </div>
             <div class="card-item"></div>

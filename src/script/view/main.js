@@ -2,7 +2,7 @@ function main() {
     const API_KEY = 'e894dd84e2b0ac1077a261e31454507b';
     const BASE_URL = 'https://api.themoviedb.org/3/';
     const IMG_URL = 'https://image.tmdb.org/t/p/w500';
-    const ALL_MOVIES = BASE_URL + 'discover/movie?primary_release_date.gte=2012-09-15&primary_release_date.lte=2021-10-22&api_key=' + API_KEY;
+    const ALL_MOVIES = BASE_URL + 'discover/movie?api_key=' + API_KEY;
     const SEARCH_URL = BASE_URL + 'search/movie?api_key=' + API_KEY + '&query=';
     const POPULAR_URL = BASE_URL + 'discover/movie?sort_by=popularity.desc&api_key=' + API_KEY;
     const API_URL = 'https://api.themoviedb.org/3/movie/popular?api_key=e894dd84e2b0ac1077a261e31454507b';
