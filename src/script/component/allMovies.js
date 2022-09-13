@@ -11,17 +11,15 @@ class allMovies extends HTMLElement {
         .card-item {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1.5rem;
-            padding: 0px 30px 0px 30px;
+            gap: 1.1rem;
+            padding: 0px 40px 0px 30px;
             margin-bottom: 30px;
         }
 
         .movies-card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            width: 180px;
-            height: 300px;
+            width: 150px;
+            height: 280px;
             border-radius: 5px;
-            background-color: #fff;
             object-fit: cover;
             position: relative;
         }
@@ -33,13 +31,14 @@ class allMovies extends HTMLElement {
         }
 
         .movies-card span {
+            font-size: 14px;
             position: absolute;
             font-weight: bold;
-            background: rgba(255, 255, 255,0.9);
+            background: rgba(255, 255, 255);
             padding: 5px;
             color: green;
-            height: 33px;
-            width: 33px;
+            height: 30px;
+            width: 30px;
             border-radius: 50%;
             margin-top: 5px;
             justify-content: center;
@@ -48,22 +47,21 @@ class allMovies extends HTMLElement {
         }
 
         .desc{
-            padding: 0px 10px 10px 10px;
-            text-align: center;
+            padding: 0px 10px 10px 0px;
         }
         
         .movies-card img {
             width: 100%;
             height: 75%;
             object-fit: cover;
-            border-radius: 5px 5px 0px 0px;
+            border-radius: 5px;
             display: block;
         }
 
         .all-movies-content {
             display: flex;
             width: 100%;
-            background-color: #e7e7e7;
+            background-color: #F2F3F4;
             border-radius: 5px;
             justify-content: space-between;
             margin-bottom: 20px;
@@ -121,8 +119,8 @@ class allMovies extends HTMLElement {
             color: #fff;
         }
 
-        .movie-title{
-            font-size: 18px;
+        .desc .movie-title{
+            font-size: 16px;
             font-weight: 600;
             text-overflow: ellipsis;
             overflow: hidden;
@@ -161,12 +159,12 @@ class allMovies extends HTMLElement {
             z-index: 80;
         }
         
-        .overlay {
+        .movies-card .overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
+            height: 75%;
             background: rgba(0, 0, 0, 0.8);
             color: #ffffff;
             display: flex;
@@ -205,6 +203,11 @@ class allMovies extends HTMLElement {
             opacity: 1;
             z-index: 50;
         }
+
+        .movies-card:hover .movie-title {
+            color: #515A5A;
+        }
+
         </style>
             <div id="content">
                 <div class="all-movies-content">

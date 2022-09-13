@@ -11,7 +11,7 @@ class popularMovies extends HTMLElement {
         .popular-content{
             display: flex;
             width: 100%;
-            background-color: #e7e7e7;
+            background-color: #F2F3F4;
             border-radius: 5px;
             justify-content: space-between;
             margin-bottom: 20px;
@@ -104,7 +104,7 @@ class popularMovies extends HTMLElement {
             position: relative;
         }
 
-        .movie-title{
+        .popular-desc .movie-title{
             font-size: 18px;
             font-weight: 600;
             text-overflow: ellipsis;

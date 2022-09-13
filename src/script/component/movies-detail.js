@@ -59,7 +59,21 @@ class moviesDetail extends HTMLElement {
         font-weight: 600;
     }
 
+    .background {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.8);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+        z-index: 80;
+    }
+    
     </style>
+    <div class="background"></div>
     <div class="movie-detail">
         <div class="desc-detail">
             <img src="assets/image/batman.jpg" alt="">

@@ -33,12 +33,14 @@ class headerName extends HTMLElement {
             padding: 15px;
         }
 
-        h2{ 
+        .name{ 
             color: #363636;
+            font-size: 35px;
+            font-weight: 600;
         }
         </style>
         <div class="header-name">
-            <h2>Movies API</h2>
+            <div class="name">Movies API</div>
         </div>
         `;
     }
