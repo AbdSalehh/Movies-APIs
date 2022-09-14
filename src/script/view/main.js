@@ -88,7 +88,7 @@ function main() {
                             </button>
                         </div>
                     </div>
-                    <div class="rate"><span>${movie.vote_average}</span></div>
+                    <div class="rate ${rateColor(movie.vote_average)}"><span>${movie.vote_average}</span></div>
                     <img src="${IMG_URL+movie.poster_path}" alt="${movie.title}">
                     <div class="desc">
                         <div class="movie-title">${movie.title}</div>
@@ -102,6 +102,16 @@ function main() {
     
     const showResponseMessage = (message = 'Check your internet connection') => {
         alert(message);
+    };
+
+    const rateColor = (rate) => {
+        if (rate >= 8) {
+            return 'green';
+        } else if (rate >= 5) {
+            return 'orange';
+        } else {
+            return 'red';
+        }
     };
 
     getPopularMovies();

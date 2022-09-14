@@ -44,6 +44,7 @@ class popularMovies extends HTMLElement {
             width: 100%;
             align-items: center;
             margin-top: 50px;
+            padding: 4px;
         }
 
         h2{
@@ -105,6 +106,7 @@ class popularMovies extends HTMLElement {
         }
 
         .popular-desc .movie-title{
+            max-width: 300px;
             font-size: 18px;
             font-weight: 600;
             text-overflow: ellipsis;

@@ -12,7 +12,7 @@ class allMovies extends HTMLElement {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 1.1rem;
-            padding: 0px 40px 0px 30px;
+            padding: 0px 25px 0px 30px;
             margin-bottom: 30px;
         }
 
@@ -30,13 +30,24 @@ class allMovies extends HTMLElement {
             margin-right: 5px;
         }
 
+        .green{
+            color: green;
+        }
+
+        .orange{
+            color: #F39C12;
+        }
+
+        .red{
+            color: red;
+        }
+
         .movies-card span {
             font-size: 14px;
             position: absolute;
             font-weight: bold;
             background: rgba(255, 255, 255);
             padding: 5px;
-            color: green;
             height: 30px;
             width: 30px;
             border-radius: 50%;
@@ -65,6 +76,8 @@ class allMovies extends HTMLElement {
             border-radius: 5px;
             justify-content: space-between;
             margin-bottom: 20px;
+            align-items: center;
+            padding: 4px;
         }
 
         .desc .movie-title{
@@ -157,17 +170,36 @@ class allMovies extends HTMLElement {
 
         .genres{
             display: inline;
-            position: relative;
+            margin: 0px 15px 0px 0px;
+            background-color: #FFF;
+            padding: 5px;
+            border-radius: 8px;
+        }
+
+        .btn-genres{
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            padding:5px;
+            background-color: #FFF;
+        }
+
+        .active{
+            background-color: rgb(242, 243, 244, 0.6 );
         }
         </style>
             <div id="content">
                 <div class="all-movies-content">
                     <h2>All Movie</h2>
-                </div>
-                <div class="genres">
-                <button class="btn-genres">Action</button>
-                <button class="btn-genres">Adventure</button>
-                <button class="btn-genres">Animation</button>
+                    <div class="genres">
+                        <button class="btn-genres active">All Movie</button>
+                        <button class="btn-genres">Action</button>
+                        <button class="btn-genres">Adventure</button>
+                        <button class="btn-genres">Animation</button>
+                    </div>
                 </div>
             </div>
             <div class="card-item"></div>

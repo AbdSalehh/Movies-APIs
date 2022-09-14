@@ -106,14 +106,14 @@ class headerName extends HTMLElement {
         <div class="header-name">
             <div class="name">Movie APIs</div>
             <ul class="nav" id="navigation">
-                <li><a class="navbar1" href="#sejarah">Sejarah</a></li>
-                <li><a class="navbar2" href="#wisata">Wisata</a></li>
-                <li><a class="navbar3" href="#penginapan">Penginapan</a></li>
+                <li><a class="navbar1" href="">Home</a></li>
+                <li><a class="navbar2" href="">TV</a></li>
+                <li><a class="navbar3" href="">Movies</a></li>
             </ul>
             <div class="search" id="search">
                 <div class="search-box shadow">
                     <input id="search-txt" class="search-txt" type="text" name=""
-                        placeholder="Ketik judul buku disini..">
+                        placeholder="Ketik judul film disini..">
                     <button id="searchSubmit" type="submit">
                         <i class="fas fa-search"></i>
                     </button>
