@@ -1,8 +1,4 @@
 class moviePoster extends HTMLElement {
-    constructor () {
-        super();
-        this.shadowDOM = this.attachShadow({mode: "open"});
-    }
 
     connectedCallback() {
         this.render();
@@ -10,7 +6,7 @@ class moviePoster extends HTMLElement {
 
     render() {
 
-        this.shadowDOM.innerHTML = `
+        this.innerHTML = `
         <style>
 
         .poster-desc {
@@ -52,7 +48,7 @@ class moviePoster extends HTMLElement {
                 <div class="relase-date">14 Mei 2015</div>
                 <div class="genre">Action</div>
             </div>
-            <img src="https://www.jagatreview.com/wp-content/uploads/2015/05/poster.png"/>
+            <img src="https://www.jagatreview.com/wp-content/uploads/2015/05/poster.png" />
         </div>
         `;
     }

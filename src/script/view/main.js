@@ -1,14 +1,41 @@
-function main() {
+import '../component/moviesList.js';
+import '../component/searchBar.js';
+import dataSource from '../data/dataSource.js';
+
+const main = () => {
+
+    const searchBar = document.querySelector('search-bar');
+    const moviesList = document.querySelector('movies-list');
+    const onButtonSearchClicked = async () => {
+        try {
+            const result = await dataSource.searchMovie(searchBar.value);
+            renderResult(result);
+        } catch (message) {
+            fallbackResult(message);
+        }
+    };
+
+    const renderResult = result => {
+        moviesList.movies = result;
+    }
+
+    const fallbackResult = message => {
+        moviesList.renderError(message);
+    }
+
+    searchBar.clickEvent = onButtonSearchClicked;
+
     const API_KEY = 'e894dd84e2b0ac1077a261e31454507b';
     const BASE_URL = 'https://api.themoviedb.org/3/';
     const IMG_URL = 'https://image.tmdb.org/t/p/w500';
     const ALL_MOVIES = BASE_URL + 'discover/movie?api_key=' + API_KEY;
-    const SEARCH_URL = BASE_URL + 'search/movie?api_key=' + API_KEY + '&query=';
-    const POPULAR_URL = BASE_URL + 'discover/movie?sort_by=popularity.desc&api_key=' + API_KEY;
     const API_URL = 'https://api.themoviedb.org/3/movie/popular?api_key=e894dd84e2b0ac1077a261e31454507b';
+    const ANIMATION_URL = 'https://api.themoviedb.org/3/discover/movie?with_genres=16&api_key=e894dd84e2b0ac1077a261e31454507b';
+    const ACTION_URL = 'https://api.themoviedb.org/3/discover/movie?with_genres=28&api_key=e894dd84e2b0ac1077a261e31454507b';
+    const ADVENTURE_URL = 'https://api.themoviedb.org/3/discover/movie?with_genres=12&api_key=e894dd84e2b0ac1077a261e31454507b';
 
-    const getPopularMovies = () => {
-        fetch(`${API_URL}`)
+    const getPopularMovies = (popular) => {
+        fetch(popular)
             .then(response => {
                 return response.json()
             })
@@ -24,8 +51,8 @@ function main() {
             });
     };
 
-    const getAllMovies = () => {
-        fetch(`${ALL_MOVIES}`)
+    const getAllMovies = (all) => {
+        fetch(all)
             .then(response => {
                 return response.json()
             })
@@ -100,9 +127,33 @@ function main() {
         });
     }
     
-    const showResponseMessage = (message = 'Check your internet connection') => {
-        alert(message);
-    };
+    const allMovie = document.querySelector('#allMovie');
+    allMovie.addEventListener('click', () => {
+        const titleBar = document.querySelector('.all-movies-content>h2');
+        titleBar.innerHTML = 'All Movie';
+        getAllMovies(ALL_MOVIES);
+    });
+
+    const Action = document.querySelector('#action');
+    Action.addEventListener('click', () => {
+        const titleBar = document.querySelector('.all-movies-content>h2');
+        titleBar.innerHTML = 'Action';
+        getAllMovies(ACTION_URL);
+    });
+
+    const Adventure = document.querySelector('#adventure');
+    Adventure.addEventListener('click', () => {
+        const titleBar = document.querySelector('.all-movies-content>h2');
+        titleBar.innerHTML = 'Adventure';
+        getAllMovies(ADVENTURE_URL);
+    });
+
+    const Animation = document.querySelector('#animation');
+    Animation.addEventListener('click', () => {
+        const titleBar = document.querySelector('.all-movies-content>h2');
+        titleBar.innerHTML = 'Animation';
+        getAllMovies(ANIMATION_URL);
+    });
 
     const rateColor = (rate) => {
         if (rate >= 8) {
@@ -113,9 +164,13 @@ function main() {
             return 'red';
         }
     };
+    
+    const showResponseMessage = (message = 'Check your internet connection') => {
+        alert(message);
+    };
 
-    getPopularMovies();
-    getAllMovies();
+    getPopularMovies(API_URL);
+    getAllMovies(ALL_MOVIES);
     
 }
 export default main;

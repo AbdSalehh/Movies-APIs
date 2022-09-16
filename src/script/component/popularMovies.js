@@ -147,6 +147,7 @@ class popularMovies extends HTMLElement {
             border: none;
             border-radius: 5px;
             padding: 5px 10px 5px 10px;
+            cursor: pointer;
         }
 
         .img-overlay>button:first-child {
@@ -163,22 +164,21 @@ class popularMovies extends HTMLElement {
             z-index: 50;
         }
         </style>
-        
-            <div id="content">
-                <div class="popular-content">
-                    <h2>Popular Movies</h2>
-                    <div class="swiper-btn">
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    </div>
+        <div id="content">
+            <div class="popular-content">
+                <h2>Popular Movies</h2>
+                <div class="swiper-btn">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
-            <div class="box">
-                <div class="popular-item swiper">
-                    <div class="swiper-wrapper">
-                    </div>
+        </div>
+        <div class="box">
+            <div class="popular-item swiper">
+                <div class="swiper-wrapper">
                 </div>
             </div>
+        </div>
         `;
     }
     

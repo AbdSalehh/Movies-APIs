@@ -29,6 +29,7 @@ main {
     overflow: auto;
 }
 
+
 /* Media Screen for Responsive Defice */
 @media screen and (max-width: 1200px) {
     .card-detail {

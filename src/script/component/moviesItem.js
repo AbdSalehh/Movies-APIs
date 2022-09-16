@@ -1,14 +1,30 @@
-class allMovies extends HTMLElement {
-
-    connectedCallback() {
+class moviesItem extends HTMLElement {
+    set movie(movie) {
+        this._movie = movie;
         this.render();
     }
 
     render() {
+        const moviePoster = document.querySelector('movie-poster');
+        moviePoster.innerHTML = '';
+        const popularMovies = document.querySelector('popular-movies');
+        popularMovies.innerHTML = '';
+        const allMovies = document.querySelector('all-movies');
+        allMovies.innerHTML = '';
+        const rateColor = (rate) => {
+            if (rate >= 8) {
+                return 'green';
+            } else if (rate >= 5) {
+                return 'orange';
+            } else {
+                return 'red';
+            }
+        };
         this.innerHTML = `
         <style>
-        
-        .card-item {
+
+        movies-list {
+            margin-top: 30px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 1.1rem;
@@ -148,7 +164,6 @@ class allMovies extends HTMLElement {
             border: none;
             border-radius: 5px;
             padding: 5px 10px 5px 10px;
-            curson: pointer;
         }
 
         .img-overlay>button:first-child {
@@ -168,62 +183,28 @@ class allMovies extends HTMLElement {
         .movies-card:hover .movie-title {
             color: #515A5A;
         }
-
-        .genres{
-            display: inline;
-            margin: 0px 15px 0px 0px;
-            background-color: #FFF;
-            padding: 8px;
-            border-radius: 8px;
-            transition: all 1s ease;
-        }
-
-        .genres input{
-            display: none;
-        }
-        
-        .genres label{
-            position: relative;
-            cursor: pointer;
-            user-select: none;
-            font-size: 15px;
-            padding: 5px;
-            font-weight: 600;
-        }
-
-        .genres input:checked + label, .genres label:hover{ 
-            color: #000;
-        }
-
-        .genres input:checked + label{
-            border-radius: 8px;
-            background-color: rgb(242, 243, 244, 0.9);
-        }
         </style>
-            <div id="content">
-                <div class="all-movies-content">
-                    <h2>All Movie</h2>
-                    <div class="genres">
-                        <input type="radio" name="genre" id="allMovie" checked>
-                        <label for="allMovie">All Movie</label>
-
-                        <input type="radio" name="genre" id="action">
-                        <label for="action">Action</label>
-
-                        <input type="radio" name="genre" id="adventure">
-                        <label for="adventure">Adventure</label>
-
-                        <input type="radio" name="genre" id="animation">
-                        <label for="animation">Animation</label>
-
-                        <div class="radio-active"></div>
+            <div class="movies-card">
+                <div class="overlay">
+                    <div class="img-overlay">
+                        <button>
+                            DETAIL
+                        </button>
+                        <button class="trailer">
+                            TRAILER
+                        </button>
                     </div>
                 </div>
-            </div>
-            <div class="card-item">
+                <div class="rate ${rateColor(this._movie.vote_average)}"><span>${this._movie.vote_average}</span></div>
+                <img src="${"https://image.tmdb.org/t/p/w500"+this._movie.poster_path}" alt="${this._movie.title}">
+                <div class="desc">
+                    <div class="movie-title">${this._movie.title}</div>
+                    <div class="relase-date">${this._movie.release_date}</div>
+                    <div class="genre">${this._movie.release_date}</div>
+                </div>
             </div>
         `;
     }
 }
 
-customElements.define('all-movies', allMovies);
+customElements.define("movies-item", moviesItem);
