@@ -14,13 +14,13 @@ var swiper = new Swiper(".popular-item", {
         prevEl: '.swiper-button-prev',
     },
     breakpoints: {
-        750: {
-            slidesPerView: 1,
+        650: {
+            slidesPerView: 2,
             spaceBetween: 10,
         },
         751: {
             slidesPerView: 2,
-            spaceBetween: 10,
+            spaceBetween: 15,
         },
         1050: {
             slidesPerView: 3,

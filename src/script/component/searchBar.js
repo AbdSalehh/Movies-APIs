@@ -61,6 +61,10 @@ class searchBar extends HTMLElement {
         #searchSubmit i:hover {
             color: #1B2631;
         }
+
+        #searchText{
+            width: 100%;
+        }
         </style>
         <div class="search-box shadow">
             <input id="searchText" class="search-txt" type="text" name=""

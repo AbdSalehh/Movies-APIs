@@ -12,12 +12,11 @@ class allMovies extends HTMLElement {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 1.1rem;
-            padding: 0px 25px 0px 30px;
+            padding: 0px 30px 0px 30px;
             margin-bottom: 30px;
         }
 
         .movies-card {
-            width: 150px;
             height: 280px;
             border-radius: 5px;
             object-fit: cover;
@@ -175,6 +174,7 @@ class allMovies extends HTMLElement {
             background-color: #FFF;
             padding: 8px;
             border-radius: 8px;
+            text-align: center;
             transition: all 1s ease;
         }
 
@@ -198,6 +198,24 @@ class allMovies extends HTMLElement {
         .genres input:checked + label{
             border-radius: 8px;
             background-color: rgb(242, 243, 244, 0.9);
+        }
+
+        @media screen and (max-width: 1050px) {
+            .card-item{
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            }
+        }
+        
+        @media screen and (max-width: 710px) {
+            
+            .all-movies-content {
+                flex-direction: column;
+                padding: 0px 0px 10px 15px;
+            }
+
+            h2{
+                margin: 0px 0 0px 0;
+            }
         }
         </style>
             <div id="content">

@@ -1,3 +1,6 @@
+import './searchBar.js';
+import genres from '../data/genres.js';
+
 class moviesItem extends HTMLElement {
     set movie(movie) {
         this._movie = movie;
@@ -5,12 +8,6 @@ class moviesItem extends HTMLElement {
     }
 
     render() {
-        const moviePoster = document.querySelector('movie-poster');
-        moviePoster.innerHTML = '';
-        const popularMovies = document.querySelector('popular-movies');
-        popularMovies.innerHTML = '';
-        const allMovies = document.querySelector('all-movies');
-        allMovies.innerHTML = '';
         const rateColor = (rate) => {
             if (rate >= 8) {
                 return 'green';
@@ -20,11 +17,16 @@ class moviesItem extends HTMLElement {
                 return 'red';
             }
         };
+        genres.forEach(genre => {
+            if (this._movie.genre_ids.includes(genre.id)) {
+                this._movie.genre = genre.name;
+            }
+        });
         this.innerHTML = `
         <style>
 
         movies-list {
-            margin-top: 30px;
+            margin-top: 20px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 1.1rem;
@@ -33,7 +35,6 @@ class moviesItem extends HTMLElement {
         }
 
         .movies-card {
-            width: 150px;
             height: 280px;
             border-radius: 5px;
             object-fit: cover;
@@ -116,91 +117,35 @@ class moviesItem extends HTMLElement {
             margin-top: 30px;
         }
 
-        h2{
-            margin: 10px 0 10px 15px;
-        }
-
-        /* Overlay */
-
-        .background {
-            position: fixed;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-            background: rgba(0, 0, 0, 0.8);
-            opacity: 0;
-            pointer-events: none;
-            transition: all 0.3s ease;
-            z-index: 80;
-        }
-        
-        .movies-card .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 75%;
-            background: rgba(0, 0, 0, 0.8);
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.25s;
-            border-radius: 5px;
-        }
-
-        .img-overlay{
-            display: flex;
-            flex-direction: column;
-        }
-
-        .img-overlay>button{
-            font-family: 'Poppins', sans-serif;
-            font-size: 15px;
-            font-weight: 500;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 5px 10px 5px 10px;
-        }
-
-        .img-overlay>button:first-child {
-            background-color: #F4D03F;
-        }
-
-        .img-overlay>button:last-child {
-            margin-top: 10px;
-            background-color: #E74C3C;
-        }
-
-        .movies-card:hover .overlay {
-            opacity: 1;
-            z-index: 50;
-        }
-
         .movies-card:hover .movie-title {
             color: #515A5A;
         }
+
+        all-movies .searchResult {
+            padding: 10px 10px 10px 10px;
+            margin: 0px 30px 0px 30px;
+            margin-top: 20px;
+            background-color: #F2F3F4;
+            border-radius: 6px;
+        }
+
+        all-movies .searchResult a {
+            font-size: 16px;
+            width: 100%;
+        }
+
+        all-movies span{
+            font-size: 18px;
+            font-weight: 600;
+        }
         </style>
             <div class="movies-card">
-                <div class="overlay">
-                    <div class="img-overlay">
-                        <button>
-                            DETAIL
-                        </button>
-                        <button class="trailer">
-                            TRAILER
-                        </button>
-                    </div>
-                </div>
                 <div class="rate ${rateColor(this._movie.vote_average)}"><span>${this._movie.vote_average}</span></div>
                 <img src="${"https://image.tmdb.org/t/p/w500"+this._movie.poster_path}" alt="${this._movie.title}">
                 <div class="desc">
                     <div class="movie-title">${this._movie.title}</div>
                     <div class="relase-date">${this._movie.release_date}</div>
-                    <div class="genre">${this._movie.release_date}</div>
+                    <div class="genre">${this._movie.genre}</div>
                 </div>
             </div>
         `;

@@ -1,15 +1,11 @@
 class footerBar extends HTMLElement {
-    constructor() {
-        super();
-        this.shadowDOM = this.attachShadow({mode: "open"});
-    }
 
     connectedCallback() {
         this.render();
     }
 
     render() {
-        this.shadowDOM.innerHTML = `
+        this.innerHTML = `
         <style> 
 
         .card {
@@ -62,8 +58,8 @@ class footerBar extends HTMLElement {
         }
 
         .container h3 {
-            margin-bottom: -20px;
-            margin-top: 3px;
+            margin-bottom: -15px;
+            margin-top: -15px;
             color: black;
         }
 
@@ -94,7 +90,6 @@ class footerBar extends HTMLElement {
         .foot {
             border-top: 1px solid #e7e7e7;
             background-color: #fff;
-            margin-bottom: 15px;
         }
 
         .foot p {
@@ -102,8 +97,29 @@ class footerBar extends HTMLElement {
             font-weight: 600;
             text-align: center;
             color: #1B2631 ;
+            margin-bottom: 10px;
+            margin-top: 10px;
         }
+        
+        @media screen and (max-width: 740px) {
+            .container {
+                width: 100%;
+                flex-direction: column;
+            }
 
+            .satu {
+                width: 80%;
+            }
+
+            .dua {
+                width: 80%;
+            }
+
+            .tiga {
+                width: 80%;
+            }
+
+        }
         </style>
         <div class="container">
             <div id="sejarah" class="card satu">
