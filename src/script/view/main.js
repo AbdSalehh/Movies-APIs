@@ -129,16 +129,6 @@ const main = () => {
             });
             cardItem.innerHTML += `
                 <div class="movies-card">
-                    <div class="overlay">
-                        <div class="img-overlay">
-                            <button>
-                                DETAIL
-                            </button>
-                            <button class="trailer">
-                                TRAILER
-                            </button>
-                        </div>
-                    </div>
                     <div class="rate ${rateColor(movie.vote_average)}"><span>${movie.vote_average}</span></div>
                     <img src="${IMG_URL+movie.poster_path}" alt="${movie.title}">
                     <div class="desc">

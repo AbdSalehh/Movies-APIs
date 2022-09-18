@@ -101,68 +101,7 @@ class allMovies extends HTMLElement {
         h2{
             margin: 10px 0 10px 15px;
         }
-
-        /* Overlay */
-
-        .background {
-            position: fixed;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-            background: rgba(0, 0, 0, 0.8);
-            opacity: 0;
-            pointer-events: none;
-            transition: all 0.3s ease;
-            z-index: 80;
-        }
         
-        .movies-card .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 75%;
-            background: rgba(0, 0, 0, 0.8);
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.25s;
-            border-radius: 5px;
-        }
-
-        .img-overlay{
-            display: flex;
-            flex-direction: column;
-        }
-
-        .img-overlay>button{
-            font-family: 'Poppins', sans-serif;
-            font-size: 15px;
-            font-weight: 500;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 5px 10px 5px 10px;
-            curson: pointer;
-        }
-
-        .img-overlay>button:first-child {
-            background-color: #F4D03F;
-        }
-
-        .img-overlay>button:last-child {
-            margin-top: 10px;
-            background-color: #E74C3C;
-        }
-
-        .movies-card:hover .overlay {
-            opacity: 1;
-            z-index: 50;
-        }
-
         .movies-card:hover .movie-title {
             color: #515A5A;
         }
