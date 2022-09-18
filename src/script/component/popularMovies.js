@@ -124,4 +124,4 @@ class popularMovies extends HTMLElement {
     
 }
 
-customElements.define('popular-movies', popularMovies);
+customElements.define("popular-movies", popularMovies);

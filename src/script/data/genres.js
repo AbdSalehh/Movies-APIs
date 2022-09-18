@@ -74,6 +74,6 @@ const genres = [{
         "id": 37,
         "name": "Western"
     }
-]
+];
 
 export default genres;

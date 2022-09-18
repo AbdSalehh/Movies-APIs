@@ -7,7 +7,7 @@ class searchBar extends HTMLElement {
         this.render();
     }
     get value() {
-        return this.querySelector('#searchText').value;
+        return this.querySelector("#searchText").value;
     }
     render() {
         this.innerHTML = `
@@ -74,7 +74,7 @@ class searchBar extends HTMLElement {
             </button>
         </div>
       `;
-        this.querySelector('#searchSubmit').addEventListener('click', this._clickEvent);
+        this.querySelector("#searchSubmit").addEventListener("click", this._clickEvent);
     }
 }
 

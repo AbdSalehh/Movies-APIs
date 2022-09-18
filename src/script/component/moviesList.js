@@ -1,4 +1,4 @@
-import './moviesItem.js';
+import "./moviesItem.js";
 
 class moviesList extends HTMLElement {
 
@@ -8,9 +8,9 @@ class moviesList extends HTMLElement {
     }
 
     render() {
-        this.innerHTML = '';
+        this.innerHTML = "";
         this._movies.forEach(movie => {
-            const moviesItemElement = document.createElement('movies-item');
+            const moviesItemElement = document.createElement("movies-item");
             moviesItemElement.movie = movie;
             this.appendChild(moviesItemElement);
         });
@@ -34,4 +34,4 @@ class moviesList extends HTMLElement {
 
 }
 
-customElements.define('movies-list', moviesList);
+customElements.define("movies-list", moviesList);

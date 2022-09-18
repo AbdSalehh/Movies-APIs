@@ -86,4 +86,4 @@ class moviePoster extends HTMLElement {
     }
 }
 
-customElements.define('movie-poster', moviePoster);
+customElements.define("movie-poster", moviePoster);

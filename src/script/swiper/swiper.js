@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars, no-undef
 var swiper = new Swiper(".popular-item", {
     slidesPerView: 1,
     spaceBetween: 30,
@@ -10,8 +11,8 @@ var swiper = new Swiper(".popular-item", {
         clickable: true,
     },
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
     breakpoints: {
         650: {

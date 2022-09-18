@@ -1,5 +1,4 @@
-import './searchBar.js';
-import genres from '../data/genres.js';
+import "./searchBar.js";
 
 class moviesItem extends HTMLElement {
     set movie(movie) {
@@ -10,18 +9,14 @@ class moviesItem extends HTMLElement {
     render() {
         const rateColor = (rate) => {
             if (rate >= 8) {
-                return 'green';
+                return "green";
             } else if (rate >= 5) {
-                return 'orange';
+                return "orange";
             } else {
-                return 'red';
+                return "red";
             }
         };
-        genres.forEach(genre => {
-            if (this._movie.genre_ids.includes(genre.id)) {
-                this._movie.genre = genre.name;
-            }
-        });
+        
         this.innerHTML = `
         <style>
 

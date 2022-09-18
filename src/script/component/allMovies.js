@@ -1,5 +1,4 @@
 class allMovies extends HTMLElement {
-
     connectedCallback() {
         this.render();
     }
@@ -205,7 +204,7 @@ class allMovies extends HTMLElement {
                 grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             }
         }
-        
+
         @media screen and (max-width: 710px) {
             
             .all-movies-content {
@@ -244,4 +243,4 @@ class allMovies extends HTMLElement {
     }
 }
 
-customElements.define('all-movies', allMovies);
+customElements.define("all-movies", allMovies);
