@@ -34,8 +34,8 @@ const main = () => {
                     movie.genre = genre.name;
                 }
             });
-            moviesList.movies = result;
         });
+        moviesList.movies = result;
     };
 
     const fallbackResult = message => {
