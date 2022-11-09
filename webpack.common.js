@@ -1,32 +1,68 @@
-/* eslint-disable no-undef */
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path');
 
-// eslint-disable-next-line no-undef
 module.exports = {
-    entry: "./src/script.js",
-    plugins:[
-        new HtmlWebpackPlugin({
-            template: "./src/index.html",
-            filename: "index.html"
-        })
-    ],
+    devtool: 'eval-cheap-source-map',
+    entry: './src/script.js',
     output: {
-        // eslint-disable-next-line no-undef
-        path: path.resolve(__dirname, "dist"),
-        chunkFilename: "[name].bundle.js"
+        path: path.resolve(__dirname, 'dist'),
+        chunkFilename: '[name].bundle.js'
     },
     module: {
         rules: [{
             test: /\.css$/,
             use: [{
-                loader: "style-loader"
+                loader: 'style-loader'
             },
             {
-                loader: "css-loader"
-            }
-            ]
+                loader: 'css-loader'
+            }]
         },
-        ],
+        {
+            test: /\.(png|svg|jpg|jpeg|webp)$/,
+            dependency: {
+                not: ['url']
+            },
+            type: 'asset/resource',
+            use: [{
+                loader: 'file-loader'
+            }]
+        }]
     },
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+            minSize: 20000,
+            maxSize: 70000,
+            minChunks: 1,
+            maxAsyncRequests: 30,
+            maxInitialRequests: 30,
+            automaticNameDelimiter: '~',
+            enforceSizeThreshold: 50000,
+            cacheGroups: {
+                defaultVendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    priority: -10
+                },
+                default: {
+                    minChunks: 2,
+                    priority: -20,
+                    reuseExistingChunk: true
+                }
+            }
+        }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+            filename: 'index.html'
+        }),
+        new CopyWebpackPlugin({
+            patterns: [{
+                from: path.resolve(__dirname, 'src/image/'),
+                to: path.resolve(__dirname, 'dist/image/')
+            }]
+        })
+    ]
 };

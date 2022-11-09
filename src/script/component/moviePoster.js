@@ -1,11 +1,9 @@
 class moviePoster extends HTMLElement {
-
     connectedCallback() {
         this.render();
     }
 
     render() {
-
         this.innerHTML = `
         <style>
 
@@ -80,10 +78,10 @@ class moviePoster extends HTMLElement {
                 <div class="relase-date">14 Mei 2015</div>
                 <div class="genre">Action</div>
             </div>
-            <img src="https://www.jagatreview.com/wp-content/uploads/2015/05/poster.png" />
+            <img class="lazyload" src="../../image/skeletonLoad.gif" data-src="${'../../image/poster.webp' ? '../../image/poster.webp' : '../../image/skeletonLoad.gif'}" alt="Poster">
         </div>
         `;
     }
 }
 
-customElements.define("movie-poster", moviePoster);
+customElements.define('movie-poster', moviePoster);

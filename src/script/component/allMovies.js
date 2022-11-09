@@ -182,4 +182,4 @@ class allMovies extends HTMLElement {
     }
 }
 
-customElements.define("all-movies", allMovies);
+customElements.define('all-movies', allMovies);

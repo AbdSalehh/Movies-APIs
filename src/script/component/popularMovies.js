@@ -1,5 +1,4 @@
 class popularMovies extends HTMLElement {
-
     connectedCallback() {
         this.render();
     }
@@ -121,7 +120,6 @@ class popularMovies extends HTMLElement {
         </div>
         `;
     }
-    
 }
 
-customElements.define("popular-movies", popularMovies);
+customElements.define('popular-movies', popularMovies);

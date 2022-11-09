@@ -1,21 +1,20 @@
-/* eslint-disable no-undef */
 const {
     merge
-} = require("webpack-merge");
-const common = require("./webpack.common");
+} = require('webpack-merge');
+const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
-    mode: "production",
+    mode: 'production',
     resolve: {
-        extensions: [".js", ".json", ]
+        extensions: ['.js', '.json']
     },
     module: {
         rules: [{
             test: /\.js$/,
             use: [{
-                loader: "babel-loader",
+                loader: 'babel-loader',
                 options: {
-                    presets: ["@babel/preset-env"]
+                    presets: ['@babel/preset-env']
                 }
             }],
             exclude: /node_modules/
@@ -26,10 +25,10 @@ module.exports = merge(common, {
             cacheGroups: {
                 vendors: {
                     test: /[\\/]node_modules[\\/]/,
-                    name: "vendor",
-                    chunks: "all"
+                    name: 'vendor',
+                    chunks: 'all'
                 }
             }
         }
-    },
+    }
 });

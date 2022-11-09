@@ -1,5 +1,4 @@
 class footerBar extends HTMLElement {
-
     connectedCallback() {
         this.render();
     }
@@ -7,6 +6,19 @@ class footerBar extends HTMLElement {
     render() {
         this.innerHTML = `
         <style> 
+
+        .container {
+            padding: 0 0 0 60px;
+            border-top: 1px solid #e7e7e7;
+            color: #1B2631 ;
+            background-color: #fff;
+            font-weight: bold;
+            display: flex;
+        }
+
+        .container .card {
+            background-color: transparent;
+        }
 
         .card {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -75,18 +87,6 @@ class footerBar extends HTMLElement {
             float: right;
         }
 
-        .container {
-            border-top: 1px solid #e7e7e7;
-            color: #1B2631 ;
-            background-color: #fff;
-            font-weight: bold;
-            display: flex;
-        }
-
-        .container .card {
-            background-color: transparent;
-        }
-
         .foot {
             border-top: 1px solid #e7e7e7;
             background-color: #fff;
@@ -101,6 +101,12 @@ class footerBar extends HTMLElement {
             margin-top: 10px;
         }
         
+        @media screen and (max-width: 950px) {
+            .container {
+                padding: 0 0 0 20px;
+            }
+        }
+
         @media screen and (max-width: 740px) {
             .container {
                 width: 100%;
@@ -132,8 +138,8 @@ class footerBar extends HTMLElement {
                 <p> Alamat : Jl. Notojoyo No. 75, Babatan, Tegalgondo, Karangploso,
                     Malang, Jawa Timur</p>
                 <p class="normal"> Phone : +6282345678910</p>
-                <p class="normal"> Email 1 : abdshaleh124@gmail.com</p>
-                <p class="normal"> Email 2 : abdshaleh124@webmail.umm.ac.id</p>
+                <p class="normal"> Email 1 : -</p>
+                <p class="normal"> Email 2 : -</p>
             </div>
             <div id="sejarah" class="card tiga">
                 <h3>Follow Me</h3>
@@ -147,4 +153,4 @@ class footerBar extends HTMLElement {
     }
 }
 
-customElements.define("footer-bar", footerBar);
+customElements.define('footer-bar', footerBar);
