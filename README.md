@@ -3,7 +3,7 @@
 [![Github? Movie APIs!](https://badgen.net/badge/Github/Movie%20APIs?color=63BB15&icon=github)](https://github.com/Naereen/badges/) ![JS](https://img.shields.io/badge/Javascript%20-%23323330.svg?&style=flat&logo=javascript&logoColor=23F7DF1E&color=34495E) 	![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat&logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat&logo=css3&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=flat&logo=visual%20studio%20code&logoColor=1589BB&color=626262) ![Windows OS](https://img.shields.io/badge/Windows-0078D6?style=flat&logo=windows&logoColor=white&color=)
 
 
-<img src="https://github.com/AbdSalehh/Movies-APIs/blob/master/src/image/Readme%20Images/Poster.png">
+<img src="https://github.com/AbdSalehh/AbdSalehh/blob/main/assets/images/Readme%20Images/Poster.png">
 
 <h2> How to start ?</h2>
 <h3 >
@@ -61,5 +61,5 @@ After running, open `http://localhost:9087/` in the browser. Enjoy :)
 
 If you have done the above steps successfully, the Movie APIs will appear as follows:
 
-<img align="right" src="https://github.com/AbdSalehh/Movies-APIs/blob/master/src/image/Readme%20Images/Search%20Result.png" width="390" height="auto">
-<img align="left" src="https://github.com/AbdSalehh/Movies-APIs/blob/master/src/image/Readme%20Images/Home%20Page.png" width="390" height="auto">
+<img align="right" src="https://github.com/AbdSalehh/AbdSalehh/blob/main/assets/images/Readme%20Images/Search%20Result.png" width="390" height="auto">
+<img align="left" src="https://github.com/AbdSalehh/AbdSalehh/blob/main/assets/images/Readme%20Images/Home%20Page.png" width="390" height="auto">
