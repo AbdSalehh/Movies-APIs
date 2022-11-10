@@ -61,5 +61,5 @@ After running, open `http://localhost:9087/` in the browser. Enjoy :)
 
 If you have done the above steps successfully, the Movie APIs will appear as follows:
 
-<img align="right" src="https://github.com/AbdSalehh/Movies-APIs/blob/master/src/image/Readme%20Images/Search%20Result.png" width="430" height="auto">
-<img align="left" src="https://github.com/AbdSalehh/Movies-APIs/blob/master/src/image/Readme%20Images/Home%20Page.png" width="430" height="auto">
+<img align="right" src="https://github.com/AbdSalehh/Movies-APIs/blob/master/src/image/Readme%20Images/Search%20Result.png" width="400" height="auto">
+<img align="left" src="https://github.com/AbdSalehh/Movies-APIs/blob/master/src/image/Readme%20Images/Home%20Page.png" width="400" height="auto">
