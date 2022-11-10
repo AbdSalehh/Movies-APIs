@@ -3,6 +3,7 @@ import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import './styles/style.css';
 import './styles/swiper-bundle.min.css';
+import './styles/responsive.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import './script/component/headerBar.js';
 import './script/component/searchBar.js';
