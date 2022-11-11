@@ -1,6 +1,7 @@
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const path = require('path');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
     devtool: 'eval-cheap-source-map',
@@ -63,6 +64,9 @@ module.exports = {
                 from: path.resolve(__dirname, 'src/image/'),
                 to: path.resolve(__dirname, 'dist/image/')
             }]
+        }),
+        new FaviconsWebpackPlugin({
+            logo: path.resolve(__dirname, 'src/image/logo.png')
         })
     ]
 };
